@@ -1,36 +1,21 @@
-Certainly! Here's a question that tests both understanding and application of hashtables:
+Sure! Here's another software interview question that uses OOP:
 
 ---
 
-**Problem: Subarray Sum Equals K**
+**Design a Zoo Management System**
 
-Given an array of integers `nums` and an integer `k`, write a function to determine if the array has a continuous subarray of any size that sums up to exactly `k`.
+Imagine you're tasked with designing a basic system to manage animals in a zoo. Here are the requirements:
 
-**Input:**
-- `nums`: List[int] - an array of integers. (1 ≤ nums.length ≤ 2*10^4)
-- `k`: int - the target sum.
+1. Different types of animals should be supported (e.g., Mammals, Birds, Reptiles, etc.).
+2. Each animal has a name, age, and health status.
+3. The zoo has multiple enclosures, and each enclosure can contain multiple animals but only of the same type (e.g., an enclosure can contain only mammals or only birds, not a mix).
+4. The system should be able to:
+   - Add new enclosures.
+   - Add new animals to a specific enclosure.
+   - Retrieve a list of all animals in an enclosure.
+   - Feed an animal, which improves its health status.
+   - Check an animal's health status.
 
-**Output:**
-- bool - `True` if there's a continuous subarray that sums up to `k`, otherwise `False`.
-
-**Examples:**
-
-```python
-subarraySum([1,2,3,2,5], 5)
-```
-Output: `True` (because 2 + 3 = 5)
-
-```python
-subarraySum([1,2,3,4,5], 11)
-```
-Output: `False` (No subarray sums up to 11)
-
-**Note:**
-
-You may assume that both the number of elements in the list and the size of the individual elements will not exceed 10,000.
+*Bonus:* Implement a feature where the system can list all animals in the zoo, grouped by their type.
 
 ---
-
-**Hint**: 
-Think about how to optimize it using a hashtable. If the cumulative sum (from start to current index) has been seen before, it indicates that a subarray between the last index where the same sum was seen and the current index sums up to `k`.
-
